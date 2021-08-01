@@ -1,27 +1,21 @@
 import React from 'react'
-import {
-  TouchableOpacity,
-  TouchableOpacityProps,
-  View,
-  Image,
-  Text,
-  ImageSourcePropType,
-} from 'react-native'
+import { View, Image, Text, ImageSourcePropType } from 'react-native'
+import { RectButton, RectButtonProps } from 'react-native-gesture-handler'
 
-import {styles} from './styles'
+import { styles } from './styles'
 
-type ButtonLoginProps = TouchableOpacityProps & {
+type ButtonLoginProps = RectButtonProps & {
   icon: ImageSourcePropType
   text: string
 }
 
-export const ButtonLogin = ({icon, text, ...rest}: ButtonLoginProps) => {
+export const ButtonLogin = ({ icon, text, ...rest }: ButtonLoginProps) => {
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.container}>
+    <RectButton style={styles.container} {...rest}>
       <View style={styles.icon}>
         <Image source={icon} />
       </View>
       <Text style={styles.title}>{text}</Text>
-    </TouchableOpacity>
+    </RectButton>
   )
 }
