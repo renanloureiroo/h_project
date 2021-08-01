@@ -1,11 +1,11 @@
 import React from 'react'
 import {View} from 'react-native'
-import {Header} from '../../components/Header'
+import {Profile} from '../../components/Profile'
 
 export const Home = () => {
   return (
     <View>
-      <Header />
+      <Profile name={'Renan Loureiro'} />
     </View>
   )
 }

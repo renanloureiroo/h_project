@@ -24,6 +24,11 @@ export const theme = {
     text400: 'Inter_400Regular',
     text500: 'Inter_500Medium',
   },
+  fontSize: {
+    small: 13,
+    medium: 16,
+    large: 20,
+  },
   borderRadius: {
     default: 8,
     circle: 9999,
