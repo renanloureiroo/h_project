@@ -1,5 +1,6 @@
 import {StatusBar} from 'expo-status-bar'
 import React from 'react'
+import {LinearGradient} from 'expo-linear-gradient'
 
 import {Image, SafeAreaView, View, Text} from 'react-native'
 import {ButtonLogin} from '../../components/ButtonLogin'
@@ -9,16 +10,16 @@ import GoogleICON from '../../assets/google.png'
 import AppleICON from '../../assets/apple.png'
 
 import {styles} from './styles'
+import {theme} from '../../global/styles/theme'
 
 export const SignIn = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar style="light" />
+    <View style={styles.container}>
       <Text style={styles.title}>
         "A vida é muito curta para{'\n'} ser pequena" - Benjamin Disraeli
       </Text>
 
-      <View style={styles.image}>
+      <View>
         <SVGSign />
       </View>
 
@@ -26,6 +27,6 @@ export const SignIn = () => {
         <ButtonLogin icon={GoogleICON} text="Entrar com Google" />
         <ButtonLogin icon={AppleICON} text="Entrar com Apple" />
       </View>
-    </SafeAreaView>
+    </View>
   )
 }
